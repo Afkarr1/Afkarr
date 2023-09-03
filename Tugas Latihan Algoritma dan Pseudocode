@@ -1,0 +1,87 @@
+1. KPK Nilai 3 dan 4
+Cara 1 = 1 membuat variabel A,B,C,D
+Cara 2 = Masukan nilai pada variabel A = 3, B = 4, C=1
+Cara 3 = Membuat perulangan, Apabila D mod A bukan = 0 program akan terus berjalan. jika D = 0 maka program akan berhenti 
+Cara 4 = Lanjut hitung variabel D = B dikali C
+Cara 5 = Membuat tambahan persamaan C = C+1
+Cara 6 = Apabila program telah selesai maka tampilkan hasil dari D 
+
+PSEUDOCODE
+ 1. A = 3
+    B = 4
+    C = 1
+    D = 0
+While D % A != 0
+D=B*C
+C=C+1
+Print ( D)
+
+2. Cara 1 = Membuat variabel piring A,piring B, piring C
+Cara 2 = Masukan nilai pada piring A= manggis, piring B= pisang, piring C = piring kosong
+Cara 3 = pindahkan manggis yang berada dipiring A ke piring C
+Cara 4 = pindahkan pisang yang beraad dipiring B ke piring A
+Cara 5 = pindahkan manggis yang berada dipiring C ke piring B
+Cara 6 = apabila sudah selesai maka tampilkan hasil dari piring A dan piring B
+
+PSEUDOCODE
+2.  piring A = manggis
+    piring B = pisang
+    piring C = piring kosong 
+    piring A = piring C
+    piring B = piring A
+    piring C = piring B
+    Print ( piring A, piring B)
+
+3. Cara 1 = Membuat variabel Alas, Tinggi, luas
+Cara 2 = Masukan nilai variabel Alas = 25, Tinggi = 30
+Cara 3 =  Hitung luas = Alas dikali Tinggi dikali setengah
+Cara 4 = Apabila sudah selesai maka tampilkan hasil dari Luas
+
+PSEUDOCODE
+3.  Alas = 25
+    Tinggi = 30
+    Luas = Alas*Tinggi*1/2
+    Print (Luas)
+
+4. Cara 1 = Membuat variabel Panjang,Tinggi, Luas
+Cara 2 = masukan nilai variabel Panjang = 5, Tinggi = 3
+Cara 3 = Hitung Luas = Alas dikali Tinggi
+Cara 4 = Apabila sudah selesai maka tampilkan hasil dari Luas
+
+PSEUDOCODE
+4. Panjang = 5
+   Tinggi = 3
+   Luas = Panjang*Tinggi 
+   Print (Luas)
+
+5. Cara 1 = Membuat variabel Jari-jari, Tinggi, Volume, phi
+Cara 2 = masukan nilai variabel Jari-jari = 3, Tinggi = 5, phi = 3,14
+Cara 3 = hitung Volume = phi dikali Jari-jari dikali Jari-jari dikali Tinggi
+Cara 4 = Apabila sudah selesai maka tampilkan hasil dari Luas
+
+PSEUDOCODE
+5. Jari-Jari = 3
+   Tinggi = 5
+   Phi = 3,14
+   Volume = phi*Jari-jari*Jari-jari*Tinggi
+   Print (Volume)
+
+6. Cara 1 = Membuat variabel Diameter, Tinggi, Jari-jari, phi, Volume
+Cara 2 = masukan nilai Diameter = 5, Tinggi =4, phi = 3,14
+Cara 3 = Hitung Jari-jari = setengah dikali Diameter
+Cara 4 = Hitung Volume = 1/3 dikali phi dikali Jari-jari dikali Jari-jari dikali Tinggi
+Cara 5 = Apabila sudah selesai maka tampilkan hasil dari Luas
+
+PSEUDOCODE
+6. Diameter = 5
+   Tinggi = 4
+   Phi = 3,14
+   Jari-jari = Diameter*1/2
+   Volume = 1/3*phi*Jari-jari*Jari-jari*Tinggi
+   Print (Volume)
+
+
+
+
+
+            
