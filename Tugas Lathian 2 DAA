@@ -1,0 +1,152 @@
+1. KPK Nilai 3 dan 4
+Cara 1 = 1 membuat variabel A,B,C,D
+Cara 2 = Masukan nilai pada variabel A = 3, B = 4, C=1
+Cara 3 = Membuat perulangan, Apabila D mod A bukan = 0 program akan terus berjalan. jika D = 0 maka program akan berhenti 
+Cara 4 = Lanjut hitung variabel D = B dikali C
+Cara 5 = Membuat tambahan persamaan C = C+1
+Cara 6 = Apabila program telah selesai maka tampilkan hasil dari D 
+
+2. Cara 1 = Membuat variabel piring A,piring B, piring C
+Cara 2 = Masukan nilai pada piring A= manggis, piring B= pisang, piring C = piring kosong
+Cara 3 = pindahkan manggis yang berada di piring A ke piring C
+Cara 4 = pindahkan pisang yang beraad dipiring B ke piring A
+Cara 5 = pindahkan manggis yang berada dipiring C ke piring B
+Cara 6 = apabila suda selesai maka tampilkan hasil dari piring A dan piring B
+
+3. Cara 1 = Membuat variabel Alas, Tinggi, luas
+Cara 2 = Masukan nilai variabel alas = 25, tinggi = 30, 
+Cara 3 =  Hitung luas = alas dikali tinggi dikali setengah
+Cara 4 = Apabila sudah selesai maka tampilkan hasil dari luas
+
+4. Cara 1 = Membuat variabel panjang,tinggi, luas
+Cara 2 = masukan nilai variabel panjang = 5, tinggi = 3
+Cara 3 = Hitung luas = alas dikali tinggi
+Cara 4 = Apabila sudah selesai maka tampilkan hasil dari luas
+
+5. Cara 1 = Membuat variabel Jari-jari, tinggi, volume, phi
+Cara 2 = masukan nilai variabel jari-jari = 3, tinggi = 5, phi = 3,14
+Cara 3 = hitung volume = phi dikali jari-jari dikali Jari-jari dikali tinggi
+Cara 4 = Apabila sudah selesai maka tampilkan hasil dari luas
+
+6. Cara 1 = Membuat variabel diameter, tinggi, Jari-jari, phi, volume
+Cara 2 = masukan nilai diameter = 5, tinggi =4, phi = 3,14
+Cara 3 = Hitung jari-jari = setengah dikali diameter
+Cara 4 = Hitung volume = 1/3 dikali phi dikali jari-jari dikali jari-jari dikali tinggi
+Cara 5 = Apabila sudah selesai maka tampilkan hasil dari luas
+
+
+
+PSEUDOCODE
+1. A = 3
+   B = 4
+   C = 1
+   D = 0
+While D % A != 0
+D=B*C
+C=C+1
+Print ( D)
+
+2.  Piring A = Manggis
+    Piring B = Pisang
+    Piring C = piring kosong 
+    Piring A = Piring C
+    Piring B = Piring A
+    Piring C = Piring B
+    Print ( Piring A, Piring B)
+
+3.  Alas = 25
+    Tinggi = 30
+    Luas = alas*tinggi*1/2
+    Print (Luas)
+
+4. Panjang = 5
+   Tinggi = 3
+   Luas = Panjang*Tinggi 
+   Print (Luas)
+
+5. Jari-Jari = 3
+   Tinggi = 5
+   Phi = 3,14
+   Volume = phi*jari-jari*Jari-jari*Tinggi
+   Print (Volume)
+
+6. Diameter = 5
+   Tinggi = 4
+   Phi = 3,14
+   Jari-Jari = Diameter*1/2
+   Volume = 1/2*phi*Jari-jari*Jari-Jari*Tinggi
+   Print (Volume)
+
+CODING :
+1. def kpk(a,b):
+    if a>b:
+      terbesar=a
+    else:
+      terbesar=b
+
+    while true:
+      if terbesar%a== and terbesar%b==0:
+         hasil=terbsesar
+         break
+         terbesar+=1
+    return hasil
+
+a = 3
+b = 4
+print("kpk dari"a"dan",b,"adalah",kpk(a,b))
+
+
+2. def menukar(a,y):
+     piring=[a,y,""]
+     for in range(len(piring)):
+     piring[2]=a
+     piring[0]=b
+     piring[1]=a
+     piring[2]=""
+  print("piring,i+1,"=",str(piring[1]))
+
+a="manggis"
+b="pisang"
+
+print("piring 1 =",a)
+peint("piring 2 =",b)
+print("piring 3 =")
+
+print("\nhasil penukaran:)
+menukar(a,b)
+
+
+3. def luas_segitiga(alas,tinggi):
+  return0,5*alas*tinggi
+
+  alas=25
+  tinggi=30
+print("alas=",alas,"\ntinggi,"\nluas=",luas_segitiga(alas,tinggi))
+
+4. def luas_jajargenjang(alas,tinggi)
+   returnalas*tinggi
+
+   alas=5
+   tinggi=3
+   print("alas=",alas,"\ntinggi=",tinggi,"\nluas=",luas_jajargenjang(alas,tinggi))
+
+5. import math
+   def volume_tabung(r,t):
+  return math.pi*r**2*t
+
+  jari_jari=3
+  tinggi=5
+  print("jari-jari=",jari_jari,"\ntinggi=tinggi,"\nluas=",volume_tabung(jari_jari,tinggi)
+
+6. import math
+   def volime_kerucut(d,t):
+   r=d/2
+   return 1/3*math.pi*r**2*t
+
+   diameter=5
+   tinggi=4
+   print("diameter="diameter,"\ntinggi="tinggi,"\volume=",volume_kerucut(diameter,tinggi)
+
+
+
+            
