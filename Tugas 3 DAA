@@ -1,0 +1,116 @@
+Alist=["John",33,"Toronto",True]
+print(Alist)
+
+import datetime
+x = datetime.datetime.now()
+Mahasiswa = ["Muhamad Afkar Fathur Rafi", 2022071062 ,"Informatika", "Desain Analisis Algoritma",x, "Univesitas Pembangunan Jaya"]
+print(Mahasiswa)
+
+print(x)
+
+bin_colors=['red','green','blue','yellow']
+bin_colors[1]
+
+bin_colors=['red','green','blue','yellow']
+bin_colors[0:2]
+
+# Slicing Nim dan Prodi
+print("# Slicing NIM dan Prodi")
+print(mahasiswa[1:3], "\n")
+
+bin_colors=['red','green','blue','yellow']
+for acolor in bin_colors:
+  print(acolor + "square")
+
+bin_colors=['rafi','sakir','nana','jamrud']
+for acolor in bin_colors:
+  print("upj " + acolor)
+
+bin_colors=['red','green','blue','yellow']
+bin_colors[1]
+bin_colors[2:]
+
+bin_colors=['Universitas','pembangunan','jaya']
+bin_colors[0]
+bin_colors[0:1]
+bin_colors[0:3]
+
+hariawal=("senin","selasa","rabu")
+hariakhir=("kamis","jumat","sabtu")
+hari=(hariawal)
+print(hari)
+
+pertama = (100)
+kedua = (200, 400, 600)
+ketiga = (300)
+keempat = (400, 800)
+nested_tuple = (pertama, kedua, ketiga, keempat)
+print(nested_tuple)
+
+bin_colors={
+    "manual_color":"yellow",
+    "nama_color":"green",
+    "refused_color":"red"
+}
+print(bin_colors)
+
+# Mengambil Nilai
+print("# Mengambil Nilai")
+print(bin_colors.get('approved_color'))
+print(bin_colors['approved_color'], "\n")
+
+
+green={'grass','leaves','leaves'}
+print(green)
+
+bin_colors={
+    "nama":"Afkar",
+    "nim":"2022071062",
+    "prodi":"informatika",
+    "universitas":"UPJ",
+}
+print(bin_colors)
+
+#inisiasi set
+set_01={4,5,6,2}
+print(set_01)
+
+#inisiasi mengubah list menjadi set
+set_02=set()
+set_03=set([2,1,4,3])
+print(type(set_02))
+print(set_03)
+
+set_01={4,5,6,2}
+set_01.add(3)
+print(set_01)
+
+set_A={1,2,3,4}
+set_B={2,3,4,5}
+print(set_A|set_B)
+print(set_A.union(set_B))
+
+set_A={1,2,3,4}
+set_B={2,3,4,5}
+print(set_A&set_B)
+print(set_A.intersection(set_B))
+
+set_A={1,2,3,4}
+set_B={0,3,8,5}
+print(set_A-set_B)
+print(set_A.difference(set_B))
+
+set_A={1,2,3,4}
+set_B={0,3,8,5}
+print(set_A^set_B)
+print(set_A.symmetric_difference(set_B))
+
+import pandas as pd
+df = pd.DataFrame([
+    ['1', 'Fares', 32, True],
+    ['2', 'Elena', 23, False],
+    ['3', 'Steven', 40, True]
+])
+df.columns = ['id', 'name', 'age', 'decision']
+print(df, "\n")
+
