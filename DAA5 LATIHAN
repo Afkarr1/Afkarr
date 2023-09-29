@@ -1,0 +1,319 @@
+def countInversi(arr):
+  result=0
+  for i in range(len(arr)):
+    for j in range (i+1,len(arr)):
+      if arr[i]>arr[j]:
+        result+=1
+  return result
+
+arr = [21,70,36,14,25]
+result = countInversi(arr)
+print(result)
+6
+
+arr = [3,7,5,2,1,8,9]
+total = 0
+for i in range (len(arr)):
+  total = total + arr[i]
+print (total)
+35
+
+def divideandconquer_max(arr,ind,len):
+  maximum = -1;
+
+  if (ind >= len - 2):
+    if(arr[ind]>arr [ind + 1]):
+      return arr[ind];
+    else:
+      return arr[ind+1];
+
+  maximum = divideandconquer_max(arr,ind + 1, len);
+
+  if (arr[ind]> maximum) :
+    return arr[ind];
+  else:
+    return maximum;
+
+def divideandconquer_min(arr,ind,len):
+  minimum = 0 ;
+
+  if (ind >= len - 2):
+    if(arr[ind]< arr [ind + 1]):
+      return arr[ind];
+    else:
+      return arr[ind+1];
+
+  minimum = divideandconquer_min(arr,ind + 1, len);
+
+  if (arr[ind]< minimum) :
+    return arr[ind];
+  else:
+    return minimum;
+
+arr = [4,12,23,9,21,1,35,2,24];
+
+maximum = divideandconquer_max(arr, 0, 9);
+minimum = divideandconquer_min(arr,0,9);
+print ("the minimum number is", minimum);
+print("the maximum number is", maximum);
+the minimum number is 1
+the maximum number is 35
+
+def mergesort(array):
+  if len(array) > 1:
+    r = len(array)//2
+    l = array[:r]
+    m = array [r:]
+    mergesort(l)
+    mergesort(m)
+
+    i = j = k = 0
+    while i < len(l) and j < len (m):
+      if l[i] < m [j]:
+        array[k] = l[i]
+        i += 1
+      else:
+        array[k] = m[j]
+        j += 1
+      k += 1
+    while i < len(l):
+      array[k]=l[i]
+      i += 1
+      k += 1
+    while j < len(m):
+      array[k] = m[j]
+      j += 1
+      k += 1
+
+def printlist(array):
+  for i in range (len(array)):
+    print(array[i], end=" ")
+  print()
+
+array = [4,12,23,9,21,1,35,2,24]
+
+mergesort(array)
+print("sorted array is: ")
+printlist(array)
+sorted array is: 
+1 2 4 9 12 21 23 24 35 
+
+def partition(array, low ,high):
+  pivot = array[high]
+
+  i = low - 1
+
+  for j in range(low,high):
+    if array [j] <= pivot:
+      i = i + 1
+      (array[i],array[j]) = (array[j],array[i])
+  (array[i+1],array[high]) = (array[high],array[i+1])
+  return i + 1
+
+def quicksort(array,low,high):
+  if low < high:
+    pi = partition(array,low,high)
+    quicksort(array,low,pi - 1)
+    quicksort(array,pi+1,high)
+
+data = [4,12,23,9,21,1,35,2,24]
+
+print("Unsorted Array: ")
+print(data)
+
+size = len(data)
+
+quicksort(data,0,size-1)
+print("Sorted array is in ascending order: ")
+print(data)
+Unsorted Array: 
+[4, 12, 23, 9, 21, 1, 35, 2, 24]
+Sorted array is in ascending order: 
+[1, 2, 4, 9, 12, 21, 23, 24, 35]
+
+def maxsubsum(arr):
+  max_so_far=0
+  max_ending_here=0
+  for i in range(len(arr)):
+    max_ending_here+=arr[i]
+    if max_ending_here > max_so_far:
+      max_so_far=max_ending_here
+    if max_ending_here < 0 :
+      max_ending_here= 0
+  return max_so_far
+arr = [-2,-5,6,-2,-3,1,5,-6]
+result = maxsubsum(arr)
+print(result)
+7
+
+def maxcrossingsum(arr,low,mid,high):
+  result = 0;leftsum=float('-infinity')
+  for i in range(mid,low-1,-1):
+    result += arr[i]
+    if result > leftsum:
+      leftsum = result
+  result = 0; rightsum=float('-infinity')
+  for i in range(mid + 1,high+1):
+    result += arr[i]
+    if result > rightsum:
+      rightsum = result
+  return leftsum + rightsum
+
+def maxsum(arr,low,high):
+  if low == high:
+    return arr[low]
+  mid = (low+high) //2
+  return max(maxsum(arr,low,mid),
+             maxsum(arr,mid+1,high),
+             maxcrossingsum(arr,low,mid,high))
+
+arr = [-2,-5,6,-2,-3,1,5,-6]
+result = maxsum(arr,0,len(arr)-1)
+print(result)
+7
+
+def longestcommonprefix (a):
+  size = len(a)
+  if (size == 0):
+    return ""
+  if (size == 1):
+    return [0]
+  a.sort()
+  end = min(len(a[0]),len(a[size - 1]))
+  i = 0
+  while (i < end and a[0][i]== a[size-1][i]):
+    i += 1
+  pre = a[0][0:i]
+  return pre
+
+
+arr = ["apple","ape","aprill"]
+result = longestcommonprefix(arr)
+print(result)
+ap
+
+def medianofarray(arr1,arr2,n):
+  m1=-1
+  m2=-1
+  count = 0
+  i=j=0
+  while count
+
+def solution(arr):
+  n = len(arr)
+  if n%2 == 0:
+    z = n // 2
+    e = arr[z]
+    q = arr[z -1]
+    ans = (e + q)/ 2
+    return ans
+  else:
+    z = n//2
+    ans = arr[z]
+    return ans
+
+arr1 = [-5,3,6,12,15]
+arr2 = [-12,-10,-6,-3,4,10]
+arr3 = arr1 + arr2
+arr3.sort()
+print("median= ",solution(arr3))
+median=  3
+
+def floorsorted(arr,low,high,x):
+  if low > high:
+    return -1
+
+  if arr[low]>x :
+    return -1
+
+  if arr[high]<=x:
+    return arr[high]
+
+  mid = (low+high)//2
+
+  if arr[mid]==x:
+    return arr[mid]
+  if mid > 0 and x >= arr[mid-1] and arr[mid]>x:
+    return arr[mid-1]
+  if mid < high and x < arr[mid+1] and x>=arr[mid]:
+    return arr[mid]
+  if x > arr[mid]:
+    return floorsorted(arr,mid+1,high,x)
+  else:
+    return floorsorted(arr,low,mid-1,x)
+
+arr = [1,2,8,10,12,14,19]
+x = 5
+print(floorsorted(arr,0,len(arr)-1,x))
+2
+
+def closestnumber(arr,low,high,x):
+  if low > high :
+    return -1
+  if arr[high]<=x:
+    return arr [high]
+  if arr[low]>=x:
+    return arr[low]
+  mid = (low + high)//2
+  if arr[mid]==x:
+    return arr[mid]
+  abs_mid=abs(arr[mid]-x)
+
+  if mid > 0 :
+    abs_left = abs(arr[mid-1]-x)
+    if abs_left < abs_mid:
+      return closestnumber(arr,low,high,x)
+
+  if mid < high :
+    abs_right = abs(arr[mid+1]-x)
+    if abs_right < abs_mid :
+      return closestnumber(arr,mid+1,high,x)
+
+  return arr[mid]
+
+arr=[2,5,6,7,8,8,9]
+x = 9
+print (closestnumber(arr,0,len(arr)-1,x))
+9
+
+def find_closest(lst,k):
+  lst.sort()
+  closest_num = lst[0]
+  for num in lst:
+    if abs(num-k)< abs(closest_num - k):
+      closest_num = num
+    if num > k:
+      break
+  return closest_num
+
+lst = [3.64,5.2,9.42,9.35,8.5,8]
+k = 9.1
+print(find_closest(lst,k))
+9.35
+
+lst = [2,5,5,7,8,8,9]
+k = 6
+print(find_closest(lst,k))
+5
+
+def fixedpoint(arr,low,high):
+  if low > high:
+    return -1
+  if arr[high]==high:
+    return arr[high]
+  if arr[low]==low:
+    return arr[low]
+  mid = (low+high)//2
+  if arr[mid]==mid:
+    return arr[mid]
+  if mid > arr[mid]:
+    return fixedpoint(arr,mid+1,high)
+  else:
+    return fixedpoint(arr,low,mid-1)
+
+arr = [9,1,4,5,2]
+
+print(fixedpoint(arr,0,len(arr)-1))
+1
+
+
